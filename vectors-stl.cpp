@@ -53,4 +53,5 @@ int main() {
     //Copying the original vector into copy_of_original vector.
     vector<int> copy_of_original(original);
 
+    return 0;
 }
