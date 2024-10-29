@@ -4,6 +4,7 @@ using namespace std;
 int main() {
     // stack uses LIFO (Last In First Out)
     stack<string> names;
+    //you cannot add elements like vector, to add elements you have to push
 
     // Pushing names onto the stack
     names.push("Sherry");
