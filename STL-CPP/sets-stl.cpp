@@ -1,6 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 int main() {
+    //set is something which stores values that are sorted and unique
     // Create a set called cars that will store strings
     set<string> cars = {"Volvo", "BMW", "Ford", "Mazda"};
 
@@ -34,6 +35,7 @@ int main() {
 
     
     //Create a set called numbers that will store integers
+    //it will sort in a sorted manner and will have unique values
     set<int> numbers = {1, 7, 3, 2, 5, 9};
 
     // Print set elements
