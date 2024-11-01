@@ -39,6 +39,7 @@ int main() {
     for(string e : names){
         cout << e << endl;
     }
+    
 
 //    for(int i=0; i<names.size(); i++){
 //        cout << names[i] << endl;
