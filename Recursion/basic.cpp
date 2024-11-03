@@ -1,11 +1,13 @@
 #include<bits/stdc++.h>
 using namespace std;
+//print n times
 void func(int i, int n){
+    //base case
     if(i > n) return;
-    else{
-        cout << i << endl;
-    }
 
+    cout << i << ": Striver" << endl;
+    
+    //recursive function call
     func(i+1, n);
 }
 int main(){
