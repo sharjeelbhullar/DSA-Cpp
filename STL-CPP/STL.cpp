@@ -307,6 +307,27 @@ void explainSet() {
     auto it = st.upper_bound(3);
 }
 
+void explainMultiset() {
+    //it can store multiple occurence but in a sorted manner
+    //elements are only stored in sorted form 
+    multiset<int> ms;
+    ms.insert(1); // {1}
+    ms.insert(1); // {1, 1}
+    ms.insert(1); // {1, 1, 1}
+    
+    ms.erase(1); //all 1's erased
+
+    int cnt = ms.count(1);
+
+    //only a single one erased
+    ms.erase(ms.find(1)); //{1, 1}
+
+    //erase two 1's
+    // ms.erase(ms.find(1), ms.find(1)+2);
+
+    // rest all funtions are same as set
+}
+
 int main() {
     // explainPair();
     // explainVectors();
@@ -315,5 +336,6 @@ int main() {
     // explainStack();
     // explainQueue();
     // explainPQ();
-    explainSet();
+    // explainSet();
+    explainMultiset();
 }   
