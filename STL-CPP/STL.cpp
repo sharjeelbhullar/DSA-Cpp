@@ -328,6 +328,66 @@ void explainMultiset() {
     // rest all funtions are same as set
 }
 
+void explainUSet() {
+    //everything is similar to set but it doesn't stored elements in a sorted manner.
+    //it doesn't store in a sorted manner but it stores only unique elements.
+    unordered_set<int> st;
+    /*
+    lower_bound and upper_bound function does not work, 
+    rest all functions are same as above, it does not store
+    in any particular order it has  a better complexity
+    than set in most cases, except some when collision happens
+    */
+}
+
+void explainMap() {
+    //data-type <key, value> name
+    //every pair(key,value) will be stored in a unique sorted way of key
+    map<int, int> mpp;
+
+    map<int, pair<int, int>> mpp;
+
+    map<pair<int, int>, int> mpp;
+/*
+    mpp[1] = 2;
+
+    mpp.emplace({3, 1});
+
+    mpp.insert({2, 4});
+
+    mpp[{2,3}] = 10;
+*/
+    for(auto it : mpp){
+        cout << it.first << " " << it.second << endl;
+    }
+
+    cout << mpp[1] << endl;
+    cout << mpp[5] << endl;
+
+    //it will access to memory address using find method
+    auto it = mpp.find(3);
+    //in order to access the element you need to put the star
+    // cout << *(it).second;
+
+    //if not find then it will put the iterator after the end
+    auto it = mpp.find(5);
+
+    auto it = mpp.lower_bound(2);
+    auto it = mpp.upper_bound(3);
+
+    //erase, swap, size, empty, are same as above
+}
+
+void explainMultiMap() {
+    //everything is similar to map, but it can store multiple/duplicate keys
+    //only mpp[key] cannot be used here
+}
+
+void explainUnorderedMap() {
+    //same as map but it is not sorted i.e. it is randomized
+    //it will not have duplicate keys i.e only unique keys 
+}
+
 int main() {
     // explainPair();
     // explainVectors();
@@ -337,5 +397,9 @@ int main() {
     // explainQueue();
     // explainPQ();
     // explainSet();
-    explainMultiset();
+    // explainMultiset();
+    // explainUSet();
+    // explainMap()
+    // explainMultiMap();
+    // explainUnorderedMap();
 }   
